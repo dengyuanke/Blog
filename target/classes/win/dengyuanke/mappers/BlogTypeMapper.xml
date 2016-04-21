@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="win.dengyuanke.dao.BlogTypeDao">
+	<resultMap type="BlogType" id="BlogTypeResult">
+		<result property="id" column="id" />
+		<result property="typeName" column="typeName" />
+		<result property="orderNo" column="orderNo" />
+	</resultMap>
+
+	<select id="countList" resultMap="BlogTypeResult">
+		SELECT
+		t_blogtype.typeName,
+		t_blogtype.id,
+		COUNT(t_blog.id) AS blogCount
+		FROM
+		t_blog
+		INNER JOIN t_blogtype ON t_blog.typeId = t_blogtype.id GROUP BY
+		t_blogtype.typeName ORDER BY t_blogtype.orderNo
+	</select>
+<select id="findById" parameterType="Integer" resultMap="BlogTypeResult">
+	select * from t_blogType where id=#{id}
+</select>
+
+</mapper> 
