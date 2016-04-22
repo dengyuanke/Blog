@@ -5,7 +5,7 @@ import java.util.List;
 import win.dengyuanke.entity.BlogType;
 
 /**
- * 博客类型Service接口
+ * 鍗氬绫诲瀷Service鎺ュ彛
  * @author Administrator
  *
  */

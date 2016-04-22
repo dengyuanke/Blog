@@ -1,14 +1,14 @@
 package win.dengyuanke.entity;
 /**
- * 友情链接实体
+ * 鍙嬫儏閾炬帴瀹炰綋
  * @author Administrator
  *
  */
 public class Link {
-	private Integer id;//编号
-	private String linkName;//链接名称
-	private String linkUrl;//链接地址
-	private Integer orderNo;//排序 从小到大
+	private Integer id;//缂栧彿
+	private String linkName;//閾炬帴鍚嶇О
+	private String linkUrl;//閾炬帴鍦板潃
+	private Integer orderNo;//鎺掑簭 浠庡皬鍒板ぇ
 	public Integer getId() {
 		return id;
 	}

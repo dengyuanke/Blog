@@ -1,15 +1,15 @@
 package win.dengyuanke.entity;
 
 /**
- * 博客类型实体
+ * 鍗氬绫诲瀷瀹炰綋
  * @author Administrator
  *
  */
 public class BlogType {
-private Integer id;//编号
-private String typeName;//类型名字
-private  Integer orderNo;//排序 从小到大
-private Integer blogCount;//数量
+private Integer id;//缂栧彿
+private String typeName;//绫诲瀷鍚嶅瓧
+private  Integer orderNo;//鎺掑簭 浠庡皬鍒板ぇ
+private Integer blogCount;//鏁伴噺
 
 
 public Integer getBlogCount() {

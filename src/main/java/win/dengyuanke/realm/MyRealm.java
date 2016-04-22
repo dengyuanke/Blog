@@ -21,7 +21,7 @@ public class MyRealm extends AuthorizingRealm {
 	private BloggerService bloggerService;
 
 	/**
-	 * µ±Ç°µÇÂ¼µÄÓÃ»§½ÇÉ«ºÍÈ¨ÏŞ
+	 * å½“å‰ç™»å½•çš„ç”¨æˆ·è§’è‰²å’Œæƒé™
 	 */
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
@@ -30,14 +30,14 @@ public class MyRealm extends AuthorizingRealm {
 	}
 
 	/**
-	 * ÑéÖ¤µ±Ç°µÇÂ½ÓÃ»§
+	 * éªŒè¯å½“å‰ç™»é™†ç”¨æˆ·
 	 */
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 		String userName=(String) token.getPrincipal();
 		Blogger blogger=bloggerService.getByUserName(userName);
 		if(blogger!=null){
-			//°Ñµ±Ç°ÓÃ»§ĞÅÏ¢´æÈësessionÖĞ
+			//æŠŠå½“å‰ç”¨æˆ·ä¿¡æ¯å­˜å…¥sessionä¸­
 			SecurityUtils.getSubject().getSession().setAttribute("currentUser", blogger);
 			AuthenticationInfo authcInfo=new SimpleAuthenticationInfo(blogger.getUserName(),blogger.getPassword(),"login");
 			return authcInfo;

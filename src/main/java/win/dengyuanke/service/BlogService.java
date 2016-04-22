@@ -6,7 +6,7 @@ import java.util.Map;
 import win.dengyuanke.entity.Blog;
 
 /**
- * 博客Service接口
+ * 鍗氬Service鎺ュ彛
  * @author Administrator
  *
  */
@@ -15,13 +15,13 @@ public interface BlogService {
 	public List<Blog> countList();
 	
 	/**
-	 * 分页查询博客
+	 * 鍒嗛〉鏌ヨ鍗氬
 	 * @param map
 	 * @return
 	 */
 	public List<Blog> list(Map<String, Object> map);
 	/**
-	 * 获取总记录数
+	 * 鑾峰彇鎬昏褰曟暟
 	 * @param map
 	 * @return
 	 */

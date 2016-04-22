@@ -2,13 +2,13 @@ package win.dengyuanke.entity;
 
 public class Blogger {
 	
-private Integer id;//±àºÅ
-private String userName;//ÓÃ»§Ãû
-private String password;//ÃÜÂë
-private String profile;//¸öÈË¼ò½é
-private String nickName;//êÇ³Æ
-private String sign;//¸öĞÔÇ©Ãû
-private String imageName;//Í·Ïñ
+private Integer id;//ç¼–å·
+private String userName;//ç”¨æˆ·å
+private String password;//å¯†ç 
+private String profile;//ä¸ªäººç®€ä»‹
+private String nickName;//æ˜µç§°
+private String sign;//ä¸ªæ€§ç­¾å
+private String imageName;//å¤´åƒ
 
 
 public String getProfile() {

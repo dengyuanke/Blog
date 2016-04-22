@@ -6,25 +6,25 @@ import java.util.Map;
 import win.dengyuanke.entity.Blog;
 
 /**
- * 博客Dao接口
+ * 鍗氬Dao鎺ュ彛
  * 
  * @author Administrator
  *
  */
 public interface BlogDao {
 	/**
-	 * 根据日期月份分组查询
+	 * 鏍规嵁鏃ユ湡鏈堜唤鍒嗙粍鏌ヨ
 	 * @return
 	 */
 	public List<Blog> countList();
 	/**
-	 * 分页查询博客
+	 * 鍒嗛〉鏌ヨ鍗氬
 	 * @param map
 	 * @return
 	 */
 	public List<Blog> list(Map<String, Object> map);
 	/**
-	 * 获取总记录数
+	 * 鑾峰彇鎬昏褰曟暟
 	 * @param map
 	 * @return
 	 */

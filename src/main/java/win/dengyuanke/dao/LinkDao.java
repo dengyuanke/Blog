@@ -6,7 +6,7 @@ import java.util.Map;
 import win.dengyuanke.entity.Link;
 
 /**
- * 友情链接Dao接口
+ * 鍙嬫儏閾炬帴Dao鎺ュ彛
  * @author Administrator
  *
  */

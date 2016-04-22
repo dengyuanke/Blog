@@ -23,12 +23,12 @@ public class BloggerController {
 		Subject subject=SecurityUtils.getSubject();
 		UsernamePasswordToken token=new UsernamePasswordToken(blogger.getUserName(),CryptographyUtil.md5(blogger.getPassword(), "dengyuanke"));
 		try {
-			subject.login(token);//µÇÂ½ÑéÖ¤
+			subject.login(token);//ç™»é™†éªŒè¯Ö¤
 			return "redirect:/admin/main.jsp";
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("blogger", blogger);
-			request.setAttribute("errorInfo", "ÓÃ»§Ãû»òÕßÃÜÂë´íÎó");
+			request.setAttribute("errorInfo", "ç”¨æˆ·åæˆ–è€…å¯†ç é”™è¯¯");
 			return "login";
 		}
 		

@@ -4,14 +4,14 @@ import win.dengyuanke.entity.Blogger;
 
 public interface BloggerDao {
 	/**
-	 * Í¨¹ıÓÃ»§Ãû²éÑ¯ÓÃ»§
+	 * é€šè¿‡ç”¨æˆ·åæŸ¥è¯¢ç”¨æˆ·
 	 * @param userName
 	 * @return
 	 */
 	public Blogger getByUserName(String userName);
 	
 	/**
-	 * ²éÑ¯²©Ö÷ĞÅÏ¢
+	 * æŸ¥è¯¢åšä¸»ä¿¡æ¯
 	 * @return
 	 */
 	public Blogger find();

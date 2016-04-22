@@ -11,7 +11,7 @@ import win.dengyuanke.dao.BlogDao;
 import win.dengyuanke.entity.Blog;
 import win.dengyuanke.service.BlogService;
 /**
- * ²©¿ÍServiceÊµÏÖÀà
+ * åšå®¢Serviceå®ç°ç±»
  * @author Administrator
  *
  */

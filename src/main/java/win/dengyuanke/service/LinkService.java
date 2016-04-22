@@ -7,7 +7,7 @@ import win.dengyuanke.entity.Link;
 
 public interface LinkService {
 	/**
-	 * ²éÑ¯ËùÓĞÁ´½Ó
+	 * æŸ¥è¯¢æ‰€æœ‰é“¾æ¥
 	 * @param userName
 	 * @return
 	 */

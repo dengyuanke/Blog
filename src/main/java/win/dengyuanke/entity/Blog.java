@@ -2,25 +2,25 @@ package win.dengyuanke.entity;
 
 import java.util.Date;
 /**
- * ²©¿ÍÊµÌå
+ * åšå®¢å®ä½“
  * @author Administrator
  *
  */
 public class Blog {
-private Integer id;//±àºÅ
-private String title;//²©¿Í±êÌâ
-private String summary;//ÕªÒª
-private Date releaseDate;//·¢²¼ÈÕÆÚ
-private Integer clickHit;//²é¿´´ÎÊı
-private Integer replyHit;//»Ø¸´´ÎÊı
-private String content;//²©¿ÍÄÚÈİ
+private Integer id;//ç¼–å·
+private String title;//åšå®¢æ ‡é¢˜
+private String summary;//æ‘˜è¦
+private Date releaseDate;//å‘å¸ƒæ—¥æœŸ
+private Integer clickHit;//æŸ¥çœ‹æ¬¡æ•°
+private Integer replyHit;//å›å¤æ¬¡æ•°
+private String content;//åšå®¢å†…å®¹
 
-private BlogType blogType;//²©¿ÍÀàĞÍ
+private BlogType blogType;//åšå®¢ç±»å‹
 
-private String keyWord;//¹Ø¼ü×Ö ¿Õ¸ñ¸ô¿ª
+private String keyWord;//å…³é”®å­— ç©ºæ ¼éš”å¼€
 
-private Integer blogCount;//²©¿ÍÊıÁ¿ ·Ç²©¿ÍÊµ¼ÊÊôĞÔ Ö÷ÒªÊÇ¸ù¾İ·¢²¼ÈÕÆÚ¹éµµ²éÑ¯ÊıÁ¿ÓÃµ½
-private String releaseDateStr;//·¢²¼ÈÕÆÚµÄ×Ö·û´® Ö»È¡ÄêºÍÔÂ
+private Integer blogCount;//åšå®¢æ•°é‡ éåšå®¢å®é™…å±æ€§ ä¸»è¦æ˜¯æ ¹æ®å‘å¸ƒæ—¥æœŸå½’æ¡£æŸ¥è¯¢æ•°é‡ç”¨åˆ°
+private String releaseDateStr;//å‘å¸ƒæ—¥æœŸçš„å­—ç¬¦ä¸² åªå–å¹´å’Œæœˆ
 public Integer getId() {
 	return id;
 }

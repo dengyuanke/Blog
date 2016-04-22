@@ -5,21 +5,21 @@ import java.util.List;
 import win.dengyuanke.entity.BlogType;
 
 /**
- * ²©¿ÍÀàĞÍDao½Ó¿Ú
+ * åšå®¢ç±»å‹Daoæ¥å£
  * 
  * @author Administrator
  *
  */
 public interface BlogTypeDao {
 	/**
-	 * ²éÑ¯ËùÓĞ²©¿ÍÀàĞÍ£¬ÒÔ¼°¶ÔÓ¦µÄ²©¿ÍÊıÁ¿
+	 * æŸ¥è¯¢æ‰€æœ‰åšå®¢ç±»å‹ï¼Œä»¥åŠå¯¹åº”çš„åšå®¢æ•°é‡
 	 * 
 	 * @return
 	 */
 	public List<BlogType> countList();
 
 	/**
-	 * ¸ù¾İid²éÕÒ²©¿ÍÀàĞÍÊµÌå
+	 * æ ¹æ®idæŸ¥æ‰¾åšå®¢ç±»å‹å®ä½“
 	 * 
 	 * @param id
 	 * @return

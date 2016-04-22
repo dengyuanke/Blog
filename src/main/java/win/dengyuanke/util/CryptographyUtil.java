@@ -4,7 +4,7 @@ package win.dengyuanke.util;
 import org.apache.shiro.crypto.hash.Md5Hash;
 
 /**
- * ¼ÓÃÜ¹¤¾ß
+ * åŠ å¯†å·¥å…·
  * @author Administrator
  *
  */
@@ -12,7 +12,7 @@ public class CryptographyUtil {
 
 	
 	/**
-	 * Md5¼ÓÃÜ
+	 * Md5åŠ å¯†
 	 * @param str
 	 * @param salt
 	 * @return
@@ -24,6 +24,6 @@ public class CryptographyUtil {
 	public static void main(String[] args) {
 		String password="123456";
 		
-		System.out.println("Md5¼ÓÃÜ£º"+CryptographyUtil.md5(password, "dengyuanke"));
+		System.out.println("Md5åŠ å¯†ï¼š"+CryptographyUtil.md5(password, "dengyuanke"));
 	}
 }

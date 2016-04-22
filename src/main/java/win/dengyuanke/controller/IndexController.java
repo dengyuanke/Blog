@@ -30,7 +30,7 @@ public class IndexController {
 	private BlogService blogService;
 	
 	/**
-	 * ������ҳ
+	 * 请求主页
 	 * @return
 	 */
 	@RequestMapping("/index")

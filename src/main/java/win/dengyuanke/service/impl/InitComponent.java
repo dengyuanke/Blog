@@ -38,9 +38,9 @@ public class InitComponent implements ServletContextListener,ApplicationContextA
 		BlogTypeService blogTypeService =(BlogTypeService) applicationContext.getBean("blogTypeService");
 		BlogService blogService =(BlogService) applicationContext.getBean("blogService");
 		
-		List<BlogType> blogTypecounts=blogTypeService.countList();//²éÑ¯²©¿ÍÀà±ğÒÔ¼°²©¿ÍÊıÁ¿
+		List<BlogType> blogTypecounts=blogTypeService.countList();//æŸ¥è¯¢åšå®¢ç±»åˆ«ä»¥åŠåšå®¢æ•°é‡
 		Blogger blogger=bloggerService.find();
-		List<Link> linkList=linkService.list(null);//²éÑ¯ËùÓĞÓÑÇéÁ´½Ó
+		List<Link> linkList=linkService.list(null);//æŸ¥è¯¢æ‰€æœ‰å‹æƒ…é“¾æ¥
 		blogger.setPassword(null);
 		application.setAttribute("blogger", blogger);
 		application.setAttribute("linkList", linkList);
