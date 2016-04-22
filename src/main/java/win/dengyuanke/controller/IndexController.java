@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 /**
- * Ö÷Ò³Contrller
+ * ï¿½ï¿½Ò³Contrller
  * @author Administrator
  *
  */
@@ -30,7 +30,7 @@ public class IndexController {
 	private BlogService blogService;
 	
 	/**
-	 * ÇëÇóÖ÷Ò³
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³
 	 * @return
 	 */
 	@RequestMapping("/index")
@@ -45,7 +45,7 @@ public class IndexController {
 		map.put("size", pageBean.getPageSize());
 		List<Blog> blogList=blogService.list(map);
 		mav.addObject("blogList",blogList);
-		mav.addObject("pageTitle","Java¿ªÔ´²©¿ÍÏµÍ³");
+		mav.addObject("pageTitle","Javaå¼€æºåšå®¢");
 		mav.addObject("mainPage","foreground/blog/list.jsp");
 		mav.setViewName("mainTemp");
 		return mav;
