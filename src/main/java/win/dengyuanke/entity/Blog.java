@@ -1,6 +1,8 @@
 package win.dengyuanke.entity;
 
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 /**
  * 博客实体
  * @author Administrator
@@ -21,6 +23,8 @@ private String keyWord;//关键字 空格隔开
 
 private Integer blogCount;//博客数量 非博客实际属性 主要是根据发布日期归档查询数量用到
 private String releaseDateStr;//发布日期的字符串 只取年和月
+
+private List<String> imageList=new LinkedList<String>();//博客存在的图片，用于index页面的缩略图
 public Integer getId() {
 	return id;
 }
@@ -86,6 +90,12 @@ public String getReleaseDateStr() {
 }
 public void setReleaseDateStr(String releaseDateStr) {
 	this.releaseDateStr = releaseDateStr;
+}
+public List<String> getImageList() {
+	return imageList;
+}
+public void setImageList(List<String> imageList) {
+	this.imageList = imageList;
 }
 
 }
