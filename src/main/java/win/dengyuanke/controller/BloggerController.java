@@ -7,6 +7,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import win.dengyuanke.entity.Blogger;
@@ -32,6 +33,17 @@ public class BloggerController {
 			return "login";
 		}
 		
+	}
+	/**
+	 * 关于博主
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/aboutMe")
+	public String aboutMe(Model model){
+		model.addAttribute("mainPage", "foreground/blogger/info.jsp");
+		model.addAttribute("pageTitle","关于博主");
+	return "mainTemp";	
 	}
 
 }

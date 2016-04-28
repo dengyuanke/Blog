@@ -13,6 +13,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 /**
@@ -39,7 +40,7 @@ public class IndexController {
 	 * @return
 	 */
 	@RequestMapping("/index")
-	public ModelAndView index(@RequestParam(value="page",required=false)String page,HttpServletRequest request) {
+	public ModelAndView index(@RequestParam(value="page",required=false)String page,@RequestParam(value="typeId",required=false)String typeId,@RequestParam(value="releaseDateStr",required=false)String releaseDateStr,HttpServletRequest request) {
 		ModelAndView mav=new ModelAndView();
 		if(StringUtils.isEmpty(page)){
 			page="1";
@@ -48,6 +49,8 @@ public class IndexController {
 		Map<String, Object> map=new HashMap<String,Object>();
 		map.put("start", pageBean.getStart());
 		map.put("size", pageBean.getPageSize());
+		map.put("typeId", typeId);
+		map.put("releaseDateStr", releaseDateStr);
 		List<Blog> blogList=blogService.list(map);
 		
 		for(Blog blog:blogList){
@@ -68,10 +71,28 @@ public class IndexController {
 		
 		StringBuffer param=new StringBuffer();
 		
+		if(StringUtils.isNotEmpty(typeId)){
+			param.append("typeId="+typeId+"&");
+		}
+		if(StringUtils.isNotEmpty(releaseDateStr)){
+			param.append("releaseDateStr="+releaseDateStr+"&");
+		}
+		
 		mav.addObject("pageCode",PageUtil.genPagination(request.getContextPath()+"/index.html", blogService.getTotal(map), Integer.parseInt(page), 10, param.toString()));
 		mav.addObject("pageTitle","Java开源博客");
 		mav.addObject("mainPage","foreground/blog/list.jsp");
 		mav.setViewName("mainTemp");
 		return mav;
+	}
+	/**
+	 * 源码下载
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/download")
+	public String aboutMe(Model model){
+		model.addAttribute("mainPage", "foreground/system/download.jsp");
+		model.addAttribute("pageTitle","本站源码下载");
+	return "mainTemp";	
 	}
 }
