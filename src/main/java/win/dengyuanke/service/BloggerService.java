@@ -1,5 +1,6 @@
 package win.dengyuanke.service;
 
+import win.dengyuanke.entity.Blog;
 import win.dengyuanke.entity.Blogger;
 
 public interface BloggerService {
@@ -15,4 +16,5 @@ public interface BloggerService {
 	 * @return
 	 */
 	public Blogger find();
+	
 }

@@ -18,7 +18,7 @@
 					  	 
 					  	<span class="img">
 					  		<c:forEach items="${blog.imageList }" var="image">
-					  		<a href="/blog/articles/52.html">${image}</a>
+					  		<a href="/blog/articles/${blog.id }.html">${image}</a>
 						  		&nbsp;&nbsp;
 					  		</c:forEach>
 						  		
