@@ -39,4 +39,19 @@ public interface BlogService {
 	 */
 	public Integer update(Blog blog);
 	
+	/**
+	 * 获取上一个博客
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public Blog getLastBlog(Integer id);
+
+	/**
+	 * 获取下一个博客
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public Blog getNextBlog(Integer id);
 }
